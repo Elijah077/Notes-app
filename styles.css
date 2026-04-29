@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 body {
@@ -17,6 +19,8 @@ body {
 .notes-container {
   border: 2px solid green;
   width: 700px;
+  margin: auto;
+  background-color: #151515;
 }
 
 .filter-container {
@@ -79,8 +83,9 @@ body {
   padding: 2px 4px;
   width: 400px;
   position: absolute;
-  top: 56px;
-  left: 46%;
+  top: 26.5%;
+  left: 44.5%;
+  background-color: white;
   z-index: 10;
 
   transition: all 0.4s ease;
@@ -140,7 +145,6 @@ body {
   padding: 0 4px;
   font-size: 1rem;
   outline: none;
-  border: 2x solid red;
   width: 95%;
 }
 
@@ -206,4 +210,52 @@ button[type="submit"] {
 
 .show-overlay {
   display: block;
+}
+
+/* notes card  */
+
+.notes-card {
+  box-shadow: 3px 3px 12px #151515;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: linear-gradient(40deg, red, orange);
+  color: white;
+}
+
+.notes-card h3 {
+  text-align: center;
+  font-weight: bold;
+  font-weight: 1.2rem;
+  background-color: black;
+}
+
+.notes-card .description {
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: black;
+}
+
+.saved-notes {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  transition: all 0.3s ease;
+  gap: 10px;
+  box-sizing: border-box;
+  justify-items: stretch;
+  padding: 3px 4px;
+  background: url(./img/birds.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.saved-notes > * {
+  width: 100%;
+}
+
+.hidden {
+  opacity: 0;
+  transform: scale(0.95);
 }
